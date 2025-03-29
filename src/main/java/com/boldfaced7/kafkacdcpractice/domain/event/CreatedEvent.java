@@ -4,7 +4,7 @@ import com.boldfaced7.kafkacdcpractice.domain.Model;
 
 import java.time.LocalDateTime;
 
-public record SavedEvent(
+public record CreatedEvent(
         Model.Id id,
         Model.UserId userId,
         Model.UserAge userAge,
@@ -14,8 +14,8 @@ public record SavedEvent(
         LocalDateTime updatedAt
 ) {
 
-    public static SavedEvent from(Model model) {
-        return new SavedEvent(
+    public static CreatedEvent from(Model model) {
+        return new CreatedEvent(
                 new Model.Id(model.getId()),
                 new Model.UserId(model.getUserId()),
                 new Model.UserAge(model.getUserAge()),
