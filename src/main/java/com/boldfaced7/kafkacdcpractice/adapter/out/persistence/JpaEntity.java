@@ -1,5 +1,6 @@
 package com.boldfaced7.kafkacdcpractice.adapter.out.persistence;
 
+import com.boldfaced7.kafkacdcpractice.adapter.out.messaging.JpaEntityListener;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@EntityListeners(JpaEntityListener.class)
 @Entity(name = "my_table")
 public class JpaEntity {
     @Id
