@@ -7,10 +7,11 @@
 - 버전별로 구현 방식에 차이가 있습니다.
 
 # Version 소개
-- `v1`: 트랜잭션 내에서 `KafkaTemplate.send()` 직접 호출
-- `v2`: Spring의 `@TransactionalEventListener` 사용
-- `v3`: JPA의 `@PostPersist` 사용
-- `v4`: Outbox Pattern 구현
+- `feature/v1`: 트랜잭션 내에서 `KafkaTemplate.send()` 직접 호출
+- `feature/v2`: Spring의 `@TransactionalEventListener` 사용
+- `feature/v3`: JPA의 `@EntityListeners` 사용
+- `feature/v4`: `@TransactionalEventListener` + `@EntityListeners`
+- `feature/v5`: Outbox Pattern 구현
 
 # 관련 포스팅(작성 중)
 [CDC(Change Data Capture)](https://boldfaced7.notion.site/4-CDC-Change-Data-Capture-1c125f2f85d68023bbf5ce851687cf53)
